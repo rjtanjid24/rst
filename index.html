@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 
+      =======================================================================
+      * Project      : RST Multimedia - Official Digital Agency Website
+      * Developed by : RJ Tanjid (Lead Developer & UI/UX Designer)
+      * Version      : 1.0.0
+      * Date         : May 2026
+      * Description  : A high-performance, responsive landing page engineered 
+                       for digital solutions, themes, and plugin showcases.
+      * Tech Stack   : HTML5, Tailwind CSS, Vanilla JavaScript (ES6)
+      =======================================================================
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RST Multimedia - Premium Digital Agency in Bangladesh led by RJ Tanjid.">
+    <meta name="author" content="RJ Tanjid">
+    
+    <title>RST Multimedia | Digital Agency in Bangladesh</title>
+    
+    <!-- External Dependencies: Tailwind CSS & Google Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom Styling -->
+    <style>
+        /* Base Typography */
+        body { 
+            font-family: 'Plus Jakarta Sans', 'Noto Sans Bengali', sans-serif; 
+            scroll-behavior: smooth; 
+        }
+        .font-hind { 
+            font-family: 'Hind Siliguri', sans-serif; 
+        }
+
+        /* Utility Classes */
+        .soft-gradient-bg { 
+            background: linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%); 
+        }
+        
+        /* Hide scrollbar for carousel but maintain functionality */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-white text-gray-800 antialiased">
+
+    <!-- ==================== NAVIGATION BAR ==================== -->
+    <nav class="bg-white shadow-sm fixed w-full z-50 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between h-20 items-center">
+            
+            <!-- Brand Logo -->
+            <div class="flex items-center gap-2">
+                <div class="font-bold text-2xl text-blue-600 tracking-tight flex items-center gap-2">
+                    <div class="w-8 h-8 bg-blue-600 text-white flex items-center justify-center rounded font-bold">R</div>
+                    RST Multimedia
+                </div>
+            </div>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8 font-medium text-sm text-gray-700">
+                <a href="#services" class="hover:text-blue-600 transition">Services</a>
+                <a href="#themes" class="hover:text-blue-600 transition">Themes & Plugins</a>
+                <a href="#about" class="hover:text-blue-600 transition">About Us</a>
+                <a href="#contact" class="bg-blue-600 text-white px-6 py-2.5 rounded-full hover:bg-blue-700 transition shadow-md font-semibold">Let's Talk</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <header class="pt-40 pb-28 relative overflow-hidden bg-gradient-to-b from-slate-50 to-white flex flex-col justify-center items-center min-h-[85vh]">
+        
+        <!-- Modern Background Pattern -->
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9IiNlMmU4ZjAiLz48L3N2Zz4=')] [mask-image:linear-gradient(to_bottom,white,transparent)] z-0"></div>
+
+        <!-- Animated Floating Blobs -->
+        <div class="absolute top-1/4 left-1/4 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-[80px] opacity-30 animate-pulse z-0"></div>
+        <div class="absolute top-1/3 right-1/4 w-72 h-72 bg-indigo-400 rounded-full mix-blend-multiply filter blur-[80px] opacity-30 animate-pulse z-0" style="animation-delay: 2s;"></div>
+
+        <!-- Hero Content -->
+        <div class="max-w-4xl mx-auto px-4 relative z-10 text-center">
+            
+            <!-- Premium Animated Badge -->
+            <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white border border-blue-100 shadow-sm text-blue-600 text-sm font-bold mb-8 transform hover:scale-105 transition-transform cursor-default">
+                <span class="relative flex h-2.5 w-2.5">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-600"></span>
+                </span>
+                Welcome to RST Multimedia
+            </div>
+
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 text-gray-900 leading-tight tracking-tight">
+                Premium Digital Agency <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">in Bangladesh</span>
+            </h1>
+            
+            <p class="text-lg md:text-xl text-gray-500 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Led by <span class="font-semibold text-gray-800">RJ Tanjid</span>, we specialize in high-performance website design, custom WordPress theme development, and bespoke plugin logic.
+            </p>
+            
+            <!-- Call to Action Buttons -->
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#contact" class="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-3.5 rounded-full hover:shadow-[0_8px_30px_rgb(37,99,235,0.25)] hover:-translate-y-1 transition-all duration-300 font-bold flex items-center justify-center gap-2 group">
+                    Let's Talk
+                    <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
+                <a href="#themes" class="w-full sm:w-auto bg-white text-gray-700 border border-gray-200 px-8 py-3.5 rounded-full hover:border-blue-600 hover:text-blue-600 hover:bg-blue-50 hover:-translate-y-1 transition-all duration-300 font-bold flex items-center justify-center gap-2 group shadow-sm">
+                    <svg class="w-4 h-4 text-gray-400 group-hover:text-blue-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+                    Explore Our Work
+                </a>
+            </div>
+            
+            <!-- Trust Indicators -->
+            <div class="mt-12 flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-sm text-gray-500 font-medium">
+                <div class="flex items-center gap-1.5">
+                    <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                    Fast Delivery
+                </div>
+                <div class="flex items-center gap-1.5">
+                    <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                    Premium Support
+                </div>
+                <div class="flex items-center gap-1.5">
+                    <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                    Custom Solutions
+                </div>
+            </div>
+            
+        </div>
+    </header>
+
+    <!-- ==================== CLIENT LOGOS SECTION ==================== -->
+    <section class="bg-white py-12 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h3 class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-10">Trusted By Leading Publishers & Brands</h3>
+            
+            <div class="flex flex-wrap justify-center items-center gap-10 md:gap-16">
+                <!-- Grayscale filters applied for professional aesthetics -->
+                <a href="https://networknewsbd.com/" target="_blank" class="opacity-60 hover:opacity-100 transition-all duration-300 transform hover:-translate-y-1 block">
+                   <img src="images/nnews bd.png" alt="Network News BD" class="h-8 md:h-10 w-auto object-contain filter grayscale hover:grayscale-0 transition-all">
+                </a>
+                <a href="https://jamunaprotidin.com/" target="_blank" class="opacity-60 hover:opacity-100 transition-all duration-300 transform hover:-translate-y-1 block">
+                    <img src="images/jp_logo.png" alt="RST Barta" class="h-8 md:h-10 w-auto object-contain filter grayscale hover:grayscale-0 transition-all">
+                </a>
+                <a href="https://jagobulletin.com/" target="_blank" class="opacity-60 hover:opacity-100 transition-all duration-300 transform hover:-translate-y-1 block">
+                    <img src="images/jago bulletin.png" alt="Jago Bulletin" class="h-8 md:h-10 w-auto object-contain filter grayscale hover:grayscale-0 transition-all">
+                </a>
+                <a href="https://mhpress24.com/" target="_blank" class="opacity-60 hover:opacity-100 transition-all duration-300 transform hover:-translate-y-1 block">
+                    <img src="images/logo_mh.png" alt="MHPress24" class="h-8 md:h-10 w-auto object-contain filter grayscale hover:grayscale-0 transition-all">
+                </a>
+                <a href="https://eboibitan.com/" target="_blank" class="opacity-60 hover:opacity-100 transition-all duration-300 transform hover:-translate-y-1 block">
+                    <img src="images/eboibitan.png" alt="eBoiBitan" class="h-8 md:h-10 w-auto object-contain filter grayscale hover:grayscale-0 transition-all">
+                </a>
+                <a href="https://pagethenews.com/" target="_blank" class="opacity-60 hover:opacity-100 transition-all duration-300 transform hover:-translate-y-1 block">
+                    <img src="images/page the news.png" alt="Page The News" class="h-8 md:h-10 w-auto object-contain filter grayscale hover:grayscale-0 transition-all">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT & LEADERSHIP ==================== -->
+    <section id="about" class="py-24 bg-gray-50/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+                <!-- Creative Image Frame -->
+                <div class="relative max-w-md mx-auto md:max-w-full">
+                    <div class="absolute -inset-4 bg-gradient-to-tr from-blue-200 to-blue-50 rounded-tl-[80px] rounded-br-[80px] rounded-tr-3xl rounded-bl-3xl -z-10 shadow-lg transform translate-x-4 translate-y-4"></div>
+                    <div class="bg-gray-100 aspect-square rounded-tl-[60px] rounded-br-[60px] rounded-tr-2xl rounded-bl-2xl flex items-center justify-center text-gray-400 shadow-2xl overflow-hidden relative group border-4 border-white z-0">
+                        <div class="absolute inset-0 bg-blue-900/0 group-hover:bg-blue-900/10 transition-colors duration-300 z-10"></div>
+                        <img src="images/lead.jpg" alt="RJ Tanjid" class="w-full h-full object-cover relative z-0 transition-transform duration-700 group-hover:scale-105">
+                    </div>
+                    
+                    <div class="absolute -bottom-6 -left-6 bg-white px-5 py-4 rounded-2xl shadow-xl z-20 flex items-center gap-3">
+                        <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center text-blue-600">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-gray-900">Digital Creator</p>
+                            <p class="text-[11px] text-gray-500">RST Multimedia</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Leadership Content -->
+                <div class="bg-white p-8 md:p-10 lg:p-12 rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-gray-100 relative mt-8 md:mt-0">
+                    <span class="text-blue-600 font-bold tracking-wider uppercase text-sm mb-2 block font-['Plus_Jakarta_Sans']">Leadership</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">Meet the Lead</h2>
+                    <h3 class="text-xl font-semibold text-blue-600 mb-6">RJ Tanjid</h3>
+                    
+                    <p class="text-gray-600 leading-relaxed mb-5 text-justify">
+                        RJ Tanjid is a dedicated digital creator and WordPress specialist. Operating under RST Multimedia, he focuses on crafting functional, user-friendly websites, modern news portals, and responsive e-commerce platforms using smart visual tools and reliable frameworks.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mb-8 text-justify">
+                        With a keen eye for clean UI/UX design and a highly practical approach, he helps publishers and organizations establish a strong digital footprint. His goal is to deliver transparent, effective, and easy-to-manage media solutions without overcomplicating the process.
+                    </p>
+                    
+                    <div class="flex gap-4">
+                        <a href="http://tanjidshuvro.pro.bd/" target="_blank" class="bg-gray-900 text-white px-8 py-3.5 rounded-full hover:bg-blue-600 transition-colors shadow-md font-medium text-sm flex items-center gap-2 group">
+                            View Portfolio
+                            <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Official Agency Entity Logo -->
+            <div class="border-t border-gray-100 pt-16 mt-20 flex flex-col items-center text-center">
+                <p class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-6">Official Agency Entity</p>
+                <div class="w-24 h-24 bg-blue-600 rounded-2xl flex items-center justify-center shadow-xl mb-4 transform hover:scale-105 transition">
+                    <span class="text-4xl font-bold text-white">R</span>
+                </div>
+                <h3 class="text-3xl font-bold text-gray-900">RST Multimedia</h3>
+                <p class="text-blue-600 font-medium">Digital Solution Provider</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- ==================== SERVICES SECTION ==================== -->
+    <section id="services" class="py-24 bg-gray-50 relative overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-64 bg-gradient-to-b from-blue-100/40 to-transparent rounded-full blur-3xl -z-10"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-blue-600 font-bold tracking-wider uppercase text-sm mb-2 block">What We Do</span>
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Premium Services</h2>
+                <div class="h-1 w-20 bg-blue-600 rounded-full mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-wrap justify-center gap-8">
+                
+                <!-- Service 1 -->
+                <div class="group bg-white w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] p-10 rounded-3xl shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-gray-100 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full -z-10 transition-transform duration-500 group-hover:scale-110"></div>
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center text-white mb-6 shadow-lg shadow-blue-200">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">WordPress Theme</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">High-performance custom theme creation tailored for modern news portals and dynamic platforms.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="group bg-white w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] p-10 rounded-3xl shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-gray-100 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full -z-10 transition-transform duration-500 group-hover:scale-110"></div>
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center text-white mb-6 shadow-lg shadow-blue-200">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 6.087c0-.355.186-.676.401-.959.221-.29.349-.634.349-1.003 0-1.036-1.007-1.875-2.25-1.875s-2.25.84-2.25 1.875c0 .369.128.713.349 1.003.215.283.401.604.401.959v0a1.5 1.5 0 01-1.5 1.5H6a1.5 1.5 0 00-1.5 1.5v1.5A1.5 1.5 0 006 12h1.5a1.5 1.5 0 011.5 1.5v.75a1.5 1.5 0 01-1.5 1.5H6a1.5 1.5 0 00-1.5 1.5v1.5A1.5 1.5 0 006 20.25h1.5a1.5 1.5 0 011.5 1.5v0c0 .355-.186.676-.401.959-.221.29-.349.634-.349 1.003 0 1.036 1.007 1.875 2.25 1.875s2.25-.84 2.25-1.875c0-.369-.128-.713-.349-1.003-.215-.283-.401-.604-.401-.959v0a1.5 1.5 0 011.5-1.5H18a1.5 1.5 0 001.5-1.5v-1.5A1.5 1.5 0 0018 12h-1.5a1.5 1.5 0 01-1.5-1.5v-.75a1.5 1.5 0 011.5-1.5H18a1.5 1.5 0 001.5-1.5v-1.5A1.5 1.5 0 0018 6.087h-1.5a1.5 1.5 0 01-1.5-1.5v0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Plugin Logic</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Bespoke plugin development to extend functionality, featuring seamless logic integration.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="group bg-white w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] p-10 rounded-3xl shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-gray-100 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full -z-10 transition-transform duration-500 group-hover:scale-110"></div>
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center text-white mb-6 shadow-lg shadow-blue-200">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.813-3.814a1.5 1.5 0 00-2.122-2.122L15.356 8.546m-1.342 2.342a4.496 4.496 0 01-1.52-2.174m-2.172 1.52a4.496 4.496 0 01-2.174-1.52m2.174 1.52a16.002 16.002 0 001.622-3.395m-1.622 3.395a15.994 15.994 0 01-3.395 1.622" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Design & Branding</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Complete visual identity crafting, applying nature-inspired and minimalist aesthetics to logos and social graphics.</p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="group bg-white w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] p-10 rounded-3xl shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-gray-100 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full -z-10 transition-transform duration-500 group-hover:scale-110"></div>
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center text-white mb-6 shadow-lg shadow-blue-200">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Voice Over</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Professional audio production providing captivating voice-overs for your digital campaigns.</p>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="group bg-white w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] p-10 rounded-3xl shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-gray-100 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full -z-10 transition-transform duration-500 group-hover:scale-110"></div>
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center text-white mb-6 shadow-lg shadow-blue-200">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M10.34 15.84c-.688-.06-1.386-.09-2.09-.09H7.5a4.5 4.5 0 110-9h.75c.704 0 1.402-.03 2.09-.09m0 9.18c.253.962.584 1.892.985 2.783.247.55.06 1.21-.463 1.511l-.657.38c-.551.318-1.26.117-1.527-.461a20.845 20.845 0 01-1.44-4.282m3.102.069a18.03 18.03 0 01-.59-4.59c0-1.586.205-3.124.59-4.59m0 9.18a23.848 23.848 0 018.835 2.535M10.34 6.66a23.847 23.847 0 008.835-2.535m0 0A23.74 23.74 0 0018.795 3m.38 1.125a23.91 23.91 0 011.014 5.395m-1.014-8.81c-2.28 1.05-4.75 1.635-7.33 1.635H7.5" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Media & PR Solutions</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Strategic advertisement placements in newspapers and engaging promotional features across print and online media.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PORTFOLIO & PRODUCTS SECTION ==================== -->
+    <section id="themes" class="py-24 bg-gray-50 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-blue-600 font-bold tracking-wider uppercase text-sm mb-2 block">Portfolio & Store</span>
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Digital Products</h2>
+                <div class="h-1 w-20 bg-blue-600 rounded-full mx-auto"></div>
+            </div>
+
+            <!-- Category Filters -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12" id="filter-container">
+                <button class="filter-btn bg-blue-600 text-white px-6 py-2.5 rounded-full font-bold shadow-md relative text-sm transition-all" data-filter="all">All Products</button>
+                <button class="filter-btn bg-white border border-gray-200 text-blue-600 px-6 py-2.5 rounded-full font-bold hover:bg-blue-50 transition-all text-sm relative" data-filter="newspaper">Newspaper</button>
+                <button class="filter-btn bg-white border border-gray-200 text-blue-600 px-6 py-2.5 rounded-full font-bold hover:bg-blue-50 transition-all text-sm relative" data-filter="institutional">Institutional</button>
+                <button class="filter-btn bg-white border border-gray-200 text-blue-600 px-6 py-2.5 rounded-full font-bold hover:bg-blue-50 transition-all text-sm relative" data-filter="organizational">Organizational</button>
+                <button class="filter-btn bg-white border border-gray-200 text-blue-600 px-6 py-2.5 rounded-full font-bold hover:bg-blue-50 transition-all text-sm relative" data-filter="ecommerce">E-commerce</button>
+                <button class="filter-btn bg-white border border-gray-200 text-blue-600 px-6 py-2.5 rounded-full font-bold hover:bg-blue-50 transition-all text-sm relative" data-filter="portfolio">Portfolio</button>
+                <button class="filter-btn bg-white border border-gray-200 text-blue-600 px-6 py-2.5 rounded-full font-bold hover:bg-blue-50 transition-all text-sm relative" data-filter="plugin">Plugin</button>
+            </div>
+
+            <!-- Dynamic Product Grid Placeholder -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
+                <!-- Javascript will populate this grid -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TESTIMONIALS SECTION ==================== -->
+    <section class="py-24 bg-gradient-to-b from-white to-blue-50/50 overflow-hidden font-hind">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-blue-600 font-bold tracking-wider uppercase text-sm mb-2 block font-['Plus_Jakarta_Sans']">Testimonials</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 font-['Plus_Jakarta_Sans']">Client Success Stories</h2>
+                <div class="h-1 w-24 bg-blue-600 rounded-full mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Review 1 -->
+                <div class="bg-white p-8 rounded-[2rem] shadow-[0_4px_20px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-gray-100 relative group hover:-translate-y-2 transition-all duration-300 flex flex-col">
+                    <div class="absolute top-6 right-8 text-blue-100 opacity-50 group-hover:text-blue-200 transition-colors">
+                        <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 32 32"><path d="M10 8c-3.3 0-6 2.7-6 6v10h10V14H8c0-1.1.9-2 2-2h4V8h-4zm14 0c-3.3 0-6 2.7-6 6v10h10V14h-6c0-1.1.9-2 2-2h4V8h-4z"/></svg>
+                    </div>
+                    
+                    <div class="text-yellow-400 text-lg mb-4 tracking-widest relative z-10">★★★★★</div>
+                    <p class="text-gray-700 leading-relaxed text-lg mb-8 flex-1 relative z-10">
+                        "তাদের সার্ভিস এক কথায় অসাধারণ। এমএইচপ্রেসের জন্য তারা খুব সুন্দর কাজ করে দিয়েছে। আমরা তাদের কাজে অত্যন্ত সন্তুষ্ট।"
+                    </p>
+                    
+                    <div class="flex items-center gap-4 pt-6 border-t border-gray-100 relative z-10">
+                        <div class="w-14 h-14 shrink-0 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white shadow-md shadow-blue-200">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" /></svg>
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-gray-900 text-lg leading-tight">মুবারক হুসাইন</h5>
+                            <p class="text-sm text-blue-600 font-medium mt-1">এমএইচপ্রেস</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-white p-8 rounded-[2rem] shadow-[0_4px_20px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-gray-100 relative group hover:-translate-y-2 transition-all duration-300 flex flex-col">
+                    <div class="absolute top-6 right-8 text-blue-100 opacity-50 group-hover:text-blue-200 transition-colors">
+                        <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 32 32"><path d="M10 8c-3.3 0-6 2.7-6 6v10h10V14H8c0-1.1.9-2 2-2h4V8h-4zm14 0c-3.3 0-6 2.7-6 6v10h10V14h-6c0-1.1.9-2 2-2h4V8h-4z"/></svg>
+                    </div>
+                    <div class="text-yellow-400 text-lg mb-4 tracking-widest relative z-10">★★★★★</div>
+                    <p class="text-gray-700 leading-relaxed text-lg mb-8 flex-1 relative z-10">
+                        "জাগো বুলেটিনের নিউজ পোর্টাল থিমটি খুব ফাস্ট। কাজের কোয়ালিটি নিয়ে কোনো সন্দেহ নেই। প্রফেশনাল সাপোর্টের জন্য আরএসটি মাল্টিমিডিয়া সেরা।"
+                    </p>
+                    <div class="flex items-center gap-4 pt-6 border-t border-gray-100 relative z-10">
+                        <div class="w-14 h-14 shrink-0 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white shadow-md shadow-blue-200">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" /></svg>
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-gray-900 text-lg leading-tight">নজরুল ইসলাম</h5>
+                            <p class="text-sm text-blue-600 font-medium mt-1">সম্পাদক ও প্রকাশক, জাগো বুলেটিন</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-white p-8 rounded-[2rem] shadow-[0_4px_20px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-gray-100 relative group hover:-translate-y-2 transition-all duration-300 flex flex-col">
+                    <div class="absolute top-6 right-8 text-blue-100 opacity-50 group-hover:text-blue-200 transition-colors">
+                        <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 32 32"><path d="M10 8c-3.3 0-6 2.7-6 6v10h10V14H8c0-1.1.9-2 2-2h4V8h-4zm14 0c-3.3 0-6 2.7-6 6v10h10V14h-6c0-1.1.9-2 2-2h4V8h-4z"/></svg>
+                    </div>
+                    <div class="text-yellow-400 text-lg mb-4 tracking-widest relative z-10">★★★★★</div>
+                    <p class="text-gray-700 leading-relaxed text-lg mb-8 flex-1 relative z-10">
+                        "যমুনা প্রতিদিনের জন্য তৈরি থিমটি চমৎকার। ইন্টারফেস খুব ইউজার-ফ্রেন্ডলি এবং পাঠকদের জন্য নিউজ পড়া এখন আরও সহজ হয়েছে।"
+                    </p>
+                    <div class="flex items-center gap-4 pt-6 border-t border-gray-100 relative z-10">
+                        <div class="w-14 h-14 shrink-0 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white shadow-md shadow-blue-200">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" /></svg>
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-gray-900 text-lg leading-tight">মোঃ সুলতানুল আরেফীন খান</h5>
+                            <p class="text-sm text-blue-600 font-medium mt-1">সম্পাদক ও প্রকাশক, যমুনা প্রতিদিন</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 4 -->
+                <div class="bg-white p-8 rounded-[2rem] shadow-[0_4px_20px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-gray-100 relative group hover:-translate-y-2 transition-all duration-300 flex flex-col">
+                    <div class="absolute top-6 right-8 text-blue-100 opacity-50 group-hover:text-blue-200 transition-colors">
+                        <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 32 32"><path d="M10 8c-3.3 0-6 2.7-6 6v10h10V14H8c0-1.1.9-2 2-2h4V8h-4zm14 0c-3.3 0-6 2.7-6 6v10h10V14h-6c0-1.1.9-2 2-2h4V8h-4z"/></svg>
+                    </div>
+                    <div class="text-yellow-400 text-lg mb-4 tracking-widest relative z-10">★★★★★</div>
+                    <p class="text-gray-700 leading-relaxed text-lg mb-8 flex-1 relative z-10">
+                        "দেশগ্রাম মিডিয়া সেন্টারের জন্য তাদের মিডিয়া সাপোর্ট ও সার্ভিস সত্যিই প্রশংসনীয়। ডিজিটাল সল্যুশনের জন্য তারা অত্যন্ত বিশ্বস্ত।"
+                    </p>
+                    <div class="flex items-center gap-4 pt-6 border-t border-gray-100 relative z-10">
+                        <div class="w-14 h-14 shrink-0 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white shadow-md shadow-blue-200">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" /></svg>
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-gray-900 text-lg leading-tight">এমকে মাহদী</h5>
+                            <p class="text-sm text-blue-600 font-medium mt-1 text-wrap">দেশগ্রাম মিডিয়া সেন্টার</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 5 -->
+                <div class="bg-white p-8 rounded-[2rem] shadow-[0_4px_20px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-gray-100 relative group hover:-translate-y-2 transition-all duration-300 flex flex-col md:col-start-1 lg:col-start-2">
+                    <div class="absolute top-6 right-8 text-blue-100 opacity-50 group-hover:text-blue-200 transition-colors">
+                        <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 32 32"><path d="M10 8c-3.3 0-6 2.7-6 6v10h10V14H8c0-1.1.9-2 2-2h4V8h-4zm14 0c-3.3 0-6 2.7-6 6v10h10V14h-6c0-1.1.9-2 2-2h4V8h-4z"/></svg>
+                    </div>
+                    <div class="text-yellow-400 text-lg mb-4 tracking-widest relative z-10">★★★★★</div>
+                    <p class="text-gray-700 leading-relaxed text-lg mb-8 flex-1 relative z-10">
+                        "ই-বই বিতানের ই-কমার্স সাইটটি খুব স্মুথলি চলছে। প্লাগিন আর কাজের ফিনিশিং খুব ভালো। তাদের কাজের ডেডিকেশন আমাকে মুগ্ধ করেছে।"
+                    </p>
+                    <div class="flex items-center gap-4 pt-6 border-t border-gray-100 relative z-10">
+                        <div class="w-14 h-14 shrink-0 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white shadow-md shadow-blue-200">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" /></svg>
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-gray-900 text-lg leading-tight">মোঃ তৌহিদুজ্জামান</h5>
+                            <p class="text-sm text-blue-600 font-medium mt-1">ই-বই বিতান</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CALL TO ACTION ==================== -->
+    <section class="py-16 bg-white border-t border-gray-100">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="bg-gray-50 rounded-3xl p-10 text-center border border-gray-200 shadow-sm relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-32 h-32 bg-blue-100 rounded-br-full opacity-50"></div>
+                <h2 class="text-3xl font-bold text-gray-900 mb-6 relative z-10">Ready to build your project?</h2>
+                <a href="mailto:mail.rstmultimedia@gmail.com" class="inline-block bg-blue-600 text-white font-bold px-10 py-4 rounded-xl hover:bg-blue-700 transition shadow-sm relative z-10">Contact Us Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer id="contact" class="bg-[#1a73e8] text-white pt-10 pb-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mb-8">
+                
+                <!-- Branding -->
+                <div class="flex flex-col items-center text-center">
+                    <h3 class="text-2xl font-bold tracking-tight">RST Multimedia</h3>
+                    <div class="h-[2px] w-12 bg-white/40 mt-2 mb-4"></div>
+                    <p class="text-white/90 text-sm leading-relaxed max-w-[280px]">
+                        We create beautiful websites, custom WordPress themes, and complete digital media solutions to help your business grow online.
+                    </p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-bold text-lg tracking-wide">Quick Links</h4>
+                    <div class="h-[2px] w-12 bg-white/40 mt-2 mb-4"></div>
+                    <ul class="space-y-3 text-white/90 text-sm">
+                        <li class="flex items-center gap-2.5">
+                            <div class="w-1.5 h-1.5 rounded-full bg-white/60 shrink-0"></div>
+                            <a href="#" class="hover:text-white transition-colors">Home</a>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <div class="w-1.5 h-1.5 rounded-full bg-white/60 shrink-0"></div>
+                            <a href="#about" class="hover:text-white transition-colors">About Us</a>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <div class="w-1.5 h-1.5 rounded-full bg-white/60 shrink-0"></div>
+                            <a href="#services" class="hover:text-white transition-colors">Our Services</a>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <div class="w-1.5 h-1.5 rounded-full bg-white/60 shrink-0"></div>
+                            <a href="#themes" class="hover:text-white transition-colors">Products & Themes</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact & Socials -->
+                <div>
+                    <h4 class="font-bold text-lg tracking-wide">Get in Touch</h4>
+                    <div class="h-[2px] w-12 bg-white/40 mt-2 mb-4"></div>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-[#1259c3] rounded-lg p-3 flex items-center gap-3 border border-white/5 w-max pr-8">
+                            <div class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            </div>
+                            <div>
+                                <p class="text-[10px] text-white/70 font-bold uppercase tracking-wider mb-0.5">Location</p>
+                                <p class="text-sm font-medium">Mirpur, Dhaka-1216</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3 pt-1">
+                            <a href="tel:+8809696867848" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white hover:text-blue-600 transition-colors flex items-center justify-center shadow-sm" aria-label="Call Us">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            </a>
+                            <a href="mailto:mail.rstmultimedia@gmail.com" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white hover:text-blue-600 transition-colors flex items-center justify-center shadow-sm" aria-label="Email Us">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            </a>
+                            <a href="https://www.facebook.com/rst.multimedia.net/" target="_blank" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white hover:text-blue-600 transition-colors flex items-center justify-center shadow-sm" aria-label="Facebook">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd" clip-rule="evenodd"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Policies & Copyright -->
+            <div class="border-t border-white/20 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center text-[13px] text-white/80">
+                <div class="mb-4 md:mb-0">
+                    <p>&copy; 2026 RST Multimedia. All Rights Reserved.</p>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="/privacy" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <span class="w-1 h-1 rounded-full bg-white/50"></span>
+                    <a href="/terms" class="hover:text-white transition-colors">Terms & Conditions</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- ==================== JAVASCRIPT LOGIC ==================== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // --- 1. Portfolio Data Rendering ---
+            const products = [
+                { cat: 'newspaper', name: 'Network News BD', desc: 'A highly scalable and blazing-fast news framework built for high-traffic journalism.', link: 'https://networknewsbd.com/', icon: '📰' },
+                { cat: 'newspaper', name: 'RST Barta', desc: 'A dynamic, engaging layout designed specifically for modern digital newsrooms.', link: 'https://jamunaprotidin.com/', icon: '🗞️' },
+                { cat: 'newspaper', name: 'RST Bulletin Pro', desc: 'A versatile bulletin design featuring advanced content categorization and smart views.', link: 'https://jagobulletin.com/', icon: '📑' },
+                { cat: 'newspaper', name: 'RST Media Post', desc: 'A sleek, media-rich template perfect for publishers focused on multimedia storytelling.', link: 'https://mhpress24.com/', icon: '📱' },
+                
+                { cat: 'ecommerce', name: 'eBoiBitan', desc: 'A specialized digital bookstore layout optimized for readers and smooth checkouts.', link: 'https://eboibitan.com/', icon: '📚' },
+                { cat: 'ecommerce', name: 'Henna Spring', desc: 'A clean, conversion-focused e-commerce storefront designed for boutique brands.', link: 'https://rjtanjid24.github.io/hennaspring/', icon: '🛍️' },
+                
+                { cat: 'institutional', name: 'Bornomala', desc: 'An intuitive institutional platform crafted to showcase academic excellence.', link: 'https://fulbariaiti.com/', icon: '🏛️' },
+                { cat: 'institutional', name: 'Pathshala', desc: 'A comprehensive, easy-to-navigate learning management interface for educators.', link: '#', icon: '🎓' },
+                
+                { cat: 'organizational', name: 'OrgBase Theme', desc: 'A robust and trustworthy structural design ideal for NGOs and corporate entities.', link: '#', icon: '🏢' },
+                
+                { cat: 'portfolio', name: 'Tanjid Shuvro', desc: 'A minimalist, impactful showcase designed specifically for creative professionals.', link: 'http://tanjidshuvro.pro.bd/', icon: '👨‍💻' },
+                { cat: 'portfolio', name: 'Saima Biva', desc: 'An elegant digital resume tailored for personal branding and striking visual portfolios.', link: 'https://saimabiva.pro.bd/', icon: '✨' },
+                { cat: 'portfolio', name: 'Towhiddjjaman', desc: 'A visually striking portfolio layout built to highlight diverse talents and projects.', link: 'https://towhiddjjaman.com/', icon: '🎨' },
+                
+                { cat: 'plugin', name: 'PressDesk Pro', desc: 'নিউজ পোর্টালের জন্য একটি সম্পূর্ণ, আধুনিক এবং স্বয়ংক্রিয় রিপোর্টার ম্যানেজমেন্ট সিস্টেম।', link: '#', icon: '⚙️' },
+                { cat: 'plugin', name: 'PressView Pro', desc: 'উন্নত সোশ্যাল শেয়ার, আকর্ষণীয় ফটোকার্ড জেনারেটর এবং চমৎকার ই-পেপার ভিউ সল্যুশন।', link: '#', icon: '🖼️' }
+            ];
+
+            const portfolioGrid = document.getElementById('portfolio-grid');
+            
+            // Populate grid safely using template literals
+            if (portfolioGrid) {
+                portfolioGrid.innerHTML = products.map(p => `
+                    <div class="portfolio-item group bg-white rounded-2xl shadow-[0_4px_20px_rgb(0,0,0,0.04)] border border-gray-100 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all duration-300 flex flex-col overflow-hidden" data-category="${p.cat}">
+                        
+                        <!-- Creative Feature Image (Browser Mockup) -->
+                        <div class="relative bg-gradient-to-br from-blue-50 to-indigo-100 h-48 flex flex-col border-b border-gray-100 overflow-hidden">
+                            <!-- Browser Dots -->
+                            <div class="w-full h-8 bg-white/40 backdrop-blur-sm flex items-center px-4 gap-1.5 z-20">
+                                <div class="w-2.5 h-2.5 rounded-full bg-red-400"></div>
+                                <div class="w-2.5 h-2.5 rounded-full bg-amber-400"></div>
+                                <div class="w-2.5 h-2.5 rounded-full bg-green-400"></div>
+                            </div>
+                            
+                            <!-- Abstract Background Pattern -->
+                            <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:16px_16px] z-0"></div>
+                            
+                            <!-- New Badge -->
+                            <span class="absolute top-12 left-0 bg-red-500 text-white text-[10px] font-bold px-3 py-1 rounded-r-full z-20 shadow-sm uppercase tracking-wider">New</span>
+                            
+                            <!-- Floating Icon -->
+                            <div class="flex-1 flex items-center justify-center relative z-10">
+                                <div class="w-20 h-20 bg-white rounded-2xl shadow-xl flex items-center justify-center text-4xl transform group-hover:-translate-y-2 group-hover:scale-110 transition duration-500">
+                                    ${p.icon}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Content Area -->
+                        <div class="p-6 flex flex-col flex-1">
+                            <h3 class="font-bold text-gray-900 text-xl mb-2">${p.name}</h3>
+                            <p class="text-sm text-gray-600 mb-6 flex-1 leading-relaxed">${p.desc}</p>
+                            
+                            <!-- Action Button -->
+                            <a href="${p.link}" target="_blank" class="w-full bg-blue-50 hover:bg-blue-600 text-blue-700 hover:text-white py-3 text-center text-sm font-bold rounded-xl transition-colors duration-300 flex justify-center items-center gap-2 group-hover:shadow-md">
+                                Live Demo 
+                                <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            // --- 2. Portfolio Filtering Logic ---
+            const btns = document.querySelectorAll('.filter-btn');
+            const items = document.querySelectorAll('.portfolio-item');
+
+            btns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Reset styling for all filter buttons
+                    btns.forEach(b => {
+                        b.classList.remove('bg-blue-600', 'text-white', 'shadow-md');
+                        b.classList.add('bg-white', 'text-blue-600');
+                    });
+                    
+                    // Apply active styling to clicked button
+                    btn.classList.add('bg-blue-600', 'text-white', 'shadow-md');
+                    btn.classList.remove('bg-white', 'text-blue-600');
+
+                    const filter = btn.getAttribute('data-filter');
+                    
+                    // Toggle visibility based on category match
+                    items.forEach(item => {
+                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                            item.style.display = 'flex'; // Uses flex to maintain card height stretching
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+        });
+    </script>
+</body>
+</html>
